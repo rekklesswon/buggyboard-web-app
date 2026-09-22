@@ -68,6 +68,7 @@ export function TitleBar({
         {onNewBug != null && (
           <button
             type="button"
+            data-testid="new-bug-button"
             onClick={onNewBug}
             className="rounded-lg px-4 py-2 text-base font-medium text-stone-800 border border-primary/60 bg-primary/25 hover:bg-primary/35 hover:border-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
           >

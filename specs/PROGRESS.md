@@ -65,6 +65,7 @@ Checklists are updated as each feature is completed. After each feature, the AI 
 - [x] Backend implemented (bugs table, bugService, POST /api/bugs)
 - [x] Frontend implemented (Create bug button, CreateBugModal with title/severity/owner/description, validation, save/cancel)
 - [x] Linter/errors resolved
+- [x] Generated 15 passing Playwright cases from `@specs/testing/create-bug-test-plan.md`, with page objects, fixtures, and per-test record cleanup (2026-09-22)
 
 ---
 

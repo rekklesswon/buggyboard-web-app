@@ -30,7 +30,8 @@ export function LoginPage() {
       const data = (await res.json().catch(() => ({}))) as LoginErrorBody;
 
       if (res.ok) {
-        const name = (data as { username?: string }).username ?? username.trim();
+        const name =
+          (data as { username?: string }).username ?? username.trim();
         login(name);
         navigate("/board", { replace: true });
         return;
@@ -81,6 +82,7 @@ export function LoginPage() {
             </label>
             <input
               id="username"
+              data-testid="login-username"
               type="text"
               autoComplete="username"
               value={username}
@@ -99,6 +101,7 @@ export function LoginPage() {
             </label>
             <input
               id="password"
+              data-testid="login-password"
               type="password"
               autoComplete="current-password"
               value={password}
@@ -116,6 +119,7 @@ export function LoginPage() {
 
           <button
             type="submit"
+            data-testid="login-submit"
             disabled={loading}
             className="w-full rounded bg-primary py-2 px-4 font-medium text-stone-800 hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
           >
